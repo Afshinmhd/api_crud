@@ -1,10 +1,12 @@
-import email
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from django.contrib.auth.password_validation import validate_password
 
 
 class RegisterSerializer(serializers.ModelSerializer):
+    """
+        This class used to serialize input data
+    """
     password2 = serializers.CharField(write_only=True, required=True)
 
     class Meta:
