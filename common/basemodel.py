@@ -4,7 +4,7 @@ from django.utils.translation import gettext as _
 
 class BaseManager(models.Manager):
     def get_queryset(self):
-        return super().get_queryset().filter(is_delete=False)
+        return super().get_queryset().filter(is_deleted=False)
 
     
 class BaseModel(models.Model):
