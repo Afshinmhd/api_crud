@@ -6,6 +6,7 @@ class MovieSerializer(serializers.ModelSerializer):
     """
         This class used to serialize input data
     """
+    creator = serializers.ReadOnlyField(source='creator.username')
 
     class Meta:
         model = MovieModel
